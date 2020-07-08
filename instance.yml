@@ -1,5 +1,6 @@
 ---
-- hosts: 172.31.37.300
+- hosts: localhost
+  gather_facts: false
   tasks:
   - name: launching ec2
     ec2:
