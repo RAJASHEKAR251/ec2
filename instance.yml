@@ -1,12 +1,9 @@
----
-- hosts: local
-- name: Create EC2 instances
-  ec2:
+- ec2:
     key_name: jenkins
-    region: us-east-1b
     instance_type: t2.micro
-    vpc_subnet_id: subnet-109faf2e
+    image: ami-123456
     wait: yes
-    exact_count: 1
+    count: 3
+    vpc_subnet_id: subnet-109faf2e
     assign_public_ip: yes
   
