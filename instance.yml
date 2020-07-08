@@ -1,6 +1,5 @@
 ---
-- hosts: 172.31.37.204
-  connection: local
+- hosts: 172.31.37.300
   tasks:
   - name: launching ec2
     ec2:
