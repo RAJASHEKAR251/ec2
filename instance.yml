@@ -1,12 +1,10 @@
 - name: Create EC2 instances
   ec2:
-    key_name: "{{ key_name }}"
-    region: "{{ region_name }}"
-    instance_type: "{{ instance_type }}"
-    image: "{{ ami_id }}"
-    vpc_subnet_id: "{{ random_subnet }}"
-    group: "{{ instance_name }}-sg"
+    key_name: jenkins
+    region: us-east-1b
+    instance_type: t2.micro
+    vpc_subnet_id: subnet-109faf2e
     wait: yes
     exact_count: 1
     assign_public_ip: yes
-  register: ec2
+  
