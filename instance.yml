@@ -1,9 +1,13 @@
-- ec2:
-    key_name: jenkins
-    instance_type: t2.micro
-    image: ami-123456
-    wait: yes
-    count: 3
-    vpc_subnet_id: subnet-109faf2e
-    assign_public_ip: yes
+---
+- hosts: localhost
+  tasks:
+  - name: launching ec2
+    ec2:
+      key_name: jenkins
+      instance_type: t2.micro
+      image: ami-08f3d892de259504d
+      wait: yes
+      count: 3
+      vpc_subnet_id: subnet-109faf2e
+      assign_public_ip: yes
   
