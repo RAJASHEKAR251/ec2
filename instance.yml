@@ -1,5 +1,6 @@
 ---
 - hosts: localhost
+  connection: local
   tasks:
   - name: launching ec2
     ec2:
